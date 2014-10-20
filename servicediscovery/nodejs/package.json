@@ -1,0 +1,28 @@
+{
+  "name": "ezbake-discovery",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Ezbake service discovery for nodejs",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ezbake/ezbake-discovery.git#nodejs_repo"
+  },
+  "keywords": [
+    "ezdiscovery",
+    "service discovery",
+    "discovery"
+  ],
+  "author": "Jeff Hastings",
+  "dependencies": {
+    "q": "1.x",
+    "node-zookeeper-client": "^0.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  }
+}

@@ -1,0 +1,25 @@
+.idea/
+*.iml
+target/
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# vim
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Ignores for Python.
+zookeeper.out
+*.pyc
