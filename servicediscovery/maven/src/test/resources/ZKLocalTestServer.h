@@ -43,12 +43,17 @@ public:
         return path;
     }
 
+    static const std::string& TargetDir() {
+        static std::string path("../../../target");
+        return path;
+    }
+
     static void start(bool clean=true) {
         std::ostringstream ss;
         if (clean) {
-            ss << ResourceDir() << "/zkServer.sh startClean " << DEFAULT_PORT << " " << ResourceDir() << "/local-zookeeper.jar";
+            ss << ResourceDir() << "/zkServer.sh startClean " << DEFAULT_PORT << " " << TargetDir() << "/local-zookeeper.jar";
         } else {
-            ss << ResourceDir() << "/zkServer.sh start " << DEFAULT_PORT << " " << ResourceDir() << "/local-zookeeper.jar";
+            ss << ResourceDir() << "/zkServer.sh start " << DEFAULT_PORT << " " << TargetDir() << "/local-zookeeper.jar";
         }
         assert(system(ss.str().c_str()) == 0);
     }

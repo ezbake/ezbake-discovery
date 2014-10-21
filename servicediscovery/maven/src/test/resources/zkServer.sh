@@ -16,9 +16,8 @@
 
 CMD=$1
 PORT=$2
-JAR_PATH=$3
+JAR_APP=$3
 TMP_DIR=$4
-JAR_APP=local-zookeeper.jar
 
 if [ "x$TMP_DIR" == "x" ]; then
     TMP_DIR=/tmp/ez_zk
@@ -46,12 +45,6 @@ else
     KILL=kill
 fi
 
-
-if [ "x$JAR_PATH" == "x" ]; then
-    JAR_APP=./utils/$JAR_APP
-else
-    JAR_APP=$JAR_PATH
-fi
 
 case $CMD in
 start|startClean)
